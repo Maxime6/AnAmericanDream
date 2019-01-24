@@ -17,7 +17,7 @@
                     <view key="view" contentMode="scaleToFill" id="WRH-28-Ut6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Y31-r9-sbJ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Translate" id="qye-kw-Utb"/>
@@ -33,7 +33,7 @@
                     <view key="view" contentMode="scaleToFill" id="u67-GQ-2kb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="4et-Uk-gtL"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Weather" id="Bk5-X6-OEP"/>
@@ -50,35 +50,112 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ke1-n9-Gmp">
-                                <rect key="frame" x="144" y="116" width="87" height="87"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="HN2-NX-2gy">
+                                <rect key="frame" x="60" y="80" width="255" height="285"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="100" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="j61-L4-CuZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="255" height="44"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="continue"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Plx-MJ-x4a">
+                                        <rect key="frame" x="40" y="55" width="175" height="175"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Plx-MJ-x4a" secondAttribute="height" multiplier="1:1" id="piz-KI-MyF"/>
+                                        </constraints>
+                                        <state key="normal" image="exchange-2"/>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uzO-Jg-z0c">
+                                        <rect key="frame" x="0.0" y="241" width="255" height="44"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Ke1-n9-Gmp" secondAttribute="height" multiplier="1:1" id="RHX-2n-qmw"/>
+                                    <constraint firstAttribute="trailing" secondItem="j61-L4-CuZ" secondAttribute="trailing" id="1LT-Rf-GsJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Plx-MJ-x4a" secondAttribute="trailing" constant="40" id="AgX-zi-7am"/>
+                                    <constraint firstAttribute="trailing" secondItem="uzO-Jg-z0c" secondAttribute="trailing" id="ES5-aZ-daI"/>
+                                    <constraint firstAttribute="bottom" secondItem="uzO-Jg-z0c" secondAttribute="bottom" id="FmL-US-LcQ"/>
+                                    <constraint firstItem="Plx-MJ-x4a" firstAttribute="leading" secondItem="HN2-NX-2gy" secondAttribute="leading" constant="40" id="QbP-Te-d2s"/>
+                                    <constraint firstItem="j61-L4-CuZ" firstAttribute="leading" secondItem="HN2-NX-2gy" secondAttribute="leading" id="azE-3d-NCj"/>
+                                    <constraint firstItem="uzO-Jg-z0c" firstAttribute="leading" secondItem="HN2-NX-2gy" secondAttribute="leading" id="d4h-VR-fyO"/>
+                                    <constraint firstItem="j61-L4-CuZ" firstAttribute="top" secondItem="HN2-NX-2gy" secondAttribute="top" id="obG-04-iD7"/>
                                 </constraints>
-                                <state key="normal" image="Exchange Symbol"/>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="100" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j61-L4-CuZ">
-                                <rect key="frame" x="120" y="78" width="135" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IHr-wE-Zr0">
-                                <rect key="frame" x="120" y="211" width="135" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="7P5-Nt-yuF">
+                                <rect key="frame" x="25" y="465" width="325" height="26.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Taux de change au :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UES-mc-svq">
+                                        <rect key="frame" x="0.0" y="0.0" width="234" height="26.5"/>
+                                        <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mx8-Tq-1Pr">
+                                        <rect key="frame" x="282" y="0.0" width="43" height="26.5"/>
+                                        <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="20"/>
+                                        <color key="textColor" red="0.76078431369999999" green="0.2470588235" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="mx8-Tq-1Pr" secondAttribute="trailing" id="FqZ-HV-BoE"/>
+                                    <constraint firstItem="mx8-Tq-1Pr" firstAttribute="top" secondItem="7P5-Nt-yuF" secondAttribute="top" id="QnJ-xh-Lf1"/>
+                                    <constraint firstAttribute="bottom" secondItem="mx8-Tq-1Pr" secondAttribute="bottom" id="bCK-Ca-5Do"/>
+                                    <constraint firstAttribute="bottom" secondItem="UES-mc-svq" secondAttribute="bottom" id="ctA-YN-fz8"/>
+                                    <constraint firstItem="UES-mc-svq" firstAttribute="top" secondItem="7P5-Nt-yuF" secondAttribute="top" id="gOu-0K-ahk"/>
+                                    <constraint firstItem="UES-mc-svq" firstAttribute="leading" secondItem="7P5-Nt-yuF" secondAttribute="leading" id="oHa-lJ-cbT"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="jem-gK-TLt">
+                                <rect key="frame" x="97" y="531.5" width="181.5" height="46.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1€" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fL3-F8-tdc">
+                                        <rect key="frame" x="0.0" y="0.0" width="38" height="46.5"/>
+                                        <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="35"/>
+                                        <color key="textColor" red="0.76078431372549016" green="0.24705882352941178" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="=" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s03-S0-o5C">
+                                        <rect key="frame" x="88" y="0.0" width="22" height="46.5"/>
+                                        <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="35"/>
+                                        <color key="textColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fu9-Ja-r0R">
+                                        <rect key="frame" x="160" y="0.0" width="21.5" height="46.5"/>
+                                        <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="35"/>
+                                        <color key="textColor" red="0.76078431372549016" green="0.24705882352941178" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Ke1-n9-Gmp" firstAttribute="centerX" secondItem="7GF-bd-Msm" secondAttribute="centerX" id="sej-Xp-0nS"/>
+                            <constraint firstItem="7P5-Nt-yuF" firstAttribute="top" secondItem="HN2-NX-2gy" secondAttribute="bottom" constant="100" id="7e9-8N-X9o"/>
+                            <constraint firstItem="jem-gK-TLt" firstAttribute="top" secondItem="7P5-Nt-yuF" secondAttribute="bottom" constant="40" id="8qP-5c-CAY"/>
+                            <constraint firstItem="7P5-Nt-yuF" firstAttribute="leading" secondItem="drM-N2-eDO" secondAttribute="leading" constant="25" id="X7X-EH-dX6"/>
+                            <constraint firstItem="HN2-NX-2gy" firstAttribute="leading" secondItem="drM-N2-eDO" secondAttribute="leading" constant="60" id="Xd8-Xb-Ogd"/>
+                            <constraint firstItem="drM-N2-eDO" firstAttribute="trailing" secondItem="HN2-NX-2gy" secondAttribute="trailing" constant="60" id="irE-4E-C7T"/>
+                            <constraint firstItem="drM-N2-eDO" firstAttribute="bottom" secondItem="jem-gK-TLt" secondAttribute="bottom" constant="40" id="nKt-6E-y6a"/>
+                            <constraint firstItem="jem-gK-TLt" firstAttribute="centerX" secondItem="7GF-bd-Msm" secondAttribute="centerX" id="ts1-Jl-4E1"/>
+                            <constraint firstAttribute="trailing" secondItem="7P5-Nt-yuF" secondAttribute="trailing" constant="25" id="zrx-Uf-60J"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="drM-N2-eDO"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Exchange Rate" id="07J-JX-P7m"/>
+                    <connections>
+                        <outlet property="baseCurrencyTextField" destination="j61-L4-CuZ" id="x3C-6a-5iH"/>
+                        <outlet property="currentExchangeRateLabel" destination="Fu9-Ja-r0R" id="LUB-ky-PsN"/>
+                        <outlet property="dateLabel" destination="mx8-Tq-1Pr" id="1Su-cu-4ja"/>
+                        <outlet property="exchangeRateLabel" destination="Fu9-Ja-r0R" id="cLP-hW-FCw"/>
+                        <outlet property="targetCurrencyTextField" destination="uzO-Jg-z0c" id="eZp-fe-WF2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bCy-Ko-teg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -92,6 +169,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="2eg-yI-MOr" kind="relationship" relationship="viewControllers" id="h0W-Jj-rP6"/>
@@ -105,6 +184,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Exchange Symbol" width="160" height="160"/>
+        <image name="exchange-2" width="170.5" height="170.5"/>
     </resources>
 </document>
