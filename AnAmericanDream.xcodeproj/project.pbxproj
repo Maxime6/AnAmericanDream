@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F6D1F3521FA008200D2C22B /* ExchangeRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6D1F3421FA008200D2C22B /* ExchangeRateViewController.swift */; };
+		6F6D1F3721FA00E600D2C22B /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6D1F3621FA00E600D2C22B /* TranslateViewController.swift */; };
+		6F6D1F3921FA011900D2C22B /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6D1F3821FA011900D2C22B /* WeatherViewController.swift */; };
 		6FC89B0F21F9D44C00B86AEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC89B0E21F9D44C00B86AEE /* AppDelegate.swift */; };
-		6FC89B1121F9D44C00B86AEE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC89B1021F9D44C00B86AEE /* ViewController.swift */; };
 		6FC89B1421F9D44C00B86AEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FC89B1221F9D44C00B86AEE /* Main.storyboard */; };
 		6FC89B1621F9D44D00B86AEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FC89B1521F9D44D00B86AEE /* Assets.xcassets */; };
 		6FC89B1921F9D44D00B86AEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FC89B1721F9D44D00B86AEE /* LaunchScreen.storyboard */; };
@@ -26,9 +28,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6F6D1F3421FA008200D2C22B /* ExchangeRateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateViewController.swift; sourceTree = "<group>"; };
+		6F6D1F3621FA00E600D2C22B /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
+		6F6D1F3821FA011900D2C22B /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		6FC89B0B21F9D44C00B86AEE /* AnAmericanDream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnAmericanDream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FC89B0E21F9D44C00B86AEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6FC89B1021F9D44C00B86AEE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6FC89B1321F9D44C00B86AEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6FC89B1521F9D44D00B86AEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6FC89B1821F9D44D00B86AEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,7 +63,10 @@
 		6FC89B0221F9D44C00B86AEE = {
 			isa = PBXGroup;
 			children = (
-				6FC89B0D21F9D44C00B86AEE /* AnAmericanDream */,
+				6FC89B3021F9D59C00B86AEE /* Model */,
+				6FC89B2F21F9D59700B86AEE /* View */,
+				6FC89B2E21F9D59100B86AEE /* Controller */,
+				6FC89B0D21F9D44C00B86AEE /* Supporting Files */,
 				6FC89B2221F9D44D00B86AEE /* AnAmericanDreamTests */,
 				6FC89B0C21F9D44C00B86AEE /* Products */,
 			);
@@ -74,17 +81,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6FC89B0D21F9D44C00B86AEE /* AnAmericanDream */ = {
+		6FC89B0D21F9D44C00B86AEE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				6FC89B0E21F9D44C00B86AEE /* AppDelegate.swift */,
-				6FC89B1021F9D44C00B86AEE /* ViewController.swift */,
-				6FC89B1221F9D44C00B86AEE /* Main.storyboard */,
 				6FC89B1521F9D44D00B86AEE /* Assets.xcassets */,
 				6FC89B1721F9D44D00B86AEE /* LaunchScreen.storyboard */,
 				6FC89B1A21F9D44D00B86AEE /* Info.plist */,
 			);
-			path = AnAmericanDream;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		6FC89B2221F9D44D00B86AEE /* AnAmericanDreamTests */ = {
@@ -94,6 +99,31 @@
 				6FC89B2521F9D44D00B86AEE /* Info.plist */,
 			);
 			path = AnAmericanDreamTests;
+			sourceTree = "<group>";
+		};
+		6FC89B2E21F9D59100B86AEE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6F6D1F3821FA011900D2C22B /* WeatherViewController.swift */,
+				6F6D1F3621FA00E600D2C22B /* TranslateViewController.swift */,
+				6F6D1F3421FA008200D2C22B /* ExchangeRateViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6FC89B2F21F9D59700B86AEE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6FC89B1221F9D44C00B86AEE /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6FC89B3021F9D59C00B86AEE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,8 +227,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FC89B1121F9D44C00B86AEE /* ViewController.swift in Sources */,
+				6F6D1F3521FA008200D2C22B /* ExchangeRateViewController.swift in Sources */,
+				6F6D1F3921FA011900D2C22B /* WeatherViewController.swift in Sources */,
 				6FC89B0F21F9D44C00B86AEE /* AppDelegate.swift in Sources */,
+				6F6D1F3721FA00E600D2C22B /* TranslateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,7 +393,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = AnAmericanDream/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -378,7 +410,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = AnAmericanDream/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
