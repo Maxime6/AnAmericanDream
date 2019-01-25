@@ -10,6 +10,8 @@
 		6F6D1F3521FA008200D2C22B /* ExchangeRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6D1F3421FA008200D2C22B /* ExchangeRateViewController.swift */; };
 		6F6D1F3721FA00E600D2C22B /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6D1F3621FA00E600D2C22B /* TranslateViewController.swift */; };
 		6F6D1F3921FA011900D2C22B /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6D1F3821FA011900D2C22B /* WeatherViewController.swift */; };
+		6F6D1F3B21FA264C00D2C22B /* ExchangeRateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6D1F3A21FA264C00D2C22B /* ExchangeRateService.swift */; };
+		6F6D1F3D21FA2AFA00D2C22B /* ExchangeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6D1F3C21FA2AFA00D2C22B /* ExchangeData.swift */; };
 		6FC89B0F21F9D44C00B86AEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC89B0E21F9D44C00B86AEE /* AppDelegate.swift */; };
 		6FC89B1421F9D44C00B86AEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FC89B1221F9D44C00B86AEE /* Main.storyboard */; };
 		6FC89B1621F9D44D00B86AEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FC89B1521F9D44D00B86AEE /* Assets.xcassets */; };
@@ -31,6 +33,8 @@
 		6F6D1F3421FA008200D2C22B /* ExchangeRateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateViewController.swift; sourceTree = "<group>"; };
 		6F6D1F3621FA00E600D2C22B /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
 		6F6D1F3821FA011900D2C22B /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		6F6D1F3A21FA264C00D2C22B /* ExchangeRateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateService.swift; sourceTree = "<group>"; };
+		6F6D1F3C21FA2AFA00D2C22B /* ExchangeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeData.swift; sourceTree = "<group>"; };
 		6FC89B0B21F9D44C00B86AEE /* AnAmericanDream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnAmericanDream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FC89B0E21F9D44C00B86AEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FC89B1321F9D44C00B86AEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 		6FC89B3021F9D59C00B86AEE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6F6D1F3A21FA264C00D2C22B /* ExchangeRateService.swift */,
+				6F6D1F3C21FA2AFA00D2C22B /* ExchangeData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -228,6 +234,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F6D1F3521FA008200D2C22B /* ExchangeRateViewController.swift in Sources */,
+				6F6D1F3D21FA2AFA00D2C22B /* ExchangeData.swift in Sources */,
+				6F6D1F3B21FA264C00D2C22B /* ExchangeRateService.swift in Sources */,
 				6F6D1F3921FA011900D2C22B /* WeatherViewController.swift in Sources */,
 				6FC89B0F21F9D44C00B86AEE /* AppDelegate.swift in Sources */,
 				6F6D1F3721FA00E600D2C22B /* TranslateViewController.swift in Sources */,
