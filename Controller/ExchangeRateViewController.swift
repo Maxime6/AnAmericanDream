@@ -37,11 +37,23 @@ class ExchangeRateViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func conversionButton(_ sender: Any) {
         baseCurrencyTextField.resignFirstResponder()
+        exchangeRatesService.getExchangeRate { (success, exchangeData) in
+            if success, let exchangeData = exchangeData {
+                // Faire la conversion et l'afficher dans le label Target
+                self.update(exchangeData: exchangeData)
+            } else {
+                // Message d'erreur
+            }
+        }
     }
     
     func baseCurrencyTextFieldShouldReturn(_ textField: UITextField) -> Bool {
         baseCurrencyTextField.resignFirstResponder()
         return true
+    }
+    
+    private func update(exchangeData: ExchangeData) {
+        currentExchangeRateLabel.text = String(exchangeData.rates.usd)
     }
     
 }
