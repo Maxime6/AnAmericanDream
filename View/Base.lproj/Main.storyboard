@@ -51,10 +51,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="HN2-NX-2gy">
-                                <rect key="frame" x="60" y="80" width="255" height="285"/>
+                                <rect key="frame" x="60" y="84.5" width="255" height="297"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="100" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="j61-L4-CuZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="255" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="255" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="30"/>
@@ -64,7 +64,7 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Plx-MJ-x4a">
-                                        <rect key="frame" x="40" y="55" width="175" height="175"/>
+                                        <rect key="frame" x="40" y="61" width="175" height="175"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Plx-MJ-x4a" secondAttribute="height" multiplier="1:1" id="piz-KI-MyF"/>
                                         </constraints>
@@ -73,48 +73,24 @@
                                             <action selector="conversionButton:" destination="2eg-yI-MOr" eventType="touchUpInside" id="oNf-xK-s7X"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uzO-Jg-z0c">
-                                        <rect key="frame" x="0.0" y="241" width="255" height="44"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TxB-Uk-5jH">
+                                        <rect key="frame" x="0.0" y="247" width="255" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="30"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="j61-L4-CuZ" secondAttribute="trailing" id="1LT-Rf-GsJ"/>
+                                    <constraint firstItem="TxB-Uk-5jH" firstAttribute="height" secondItem="j61-L4-CuZ" secondAttribute="height" id="988-zh-zbt"/>
                                     <constraint firstAttribute="trailing" secondItem="Plx-MJ-x4a" secondAttribute="trailing" constant="40" id="AgX-zi-7am"/>
-                                    <constraint firstAttribute="trailing" secondItem="uzO-Jg-z0c" secondAttribute="trailing" id="ES5-aZ-daI"/>
-                                    <constraint firstAttribute="bottom" secondItem="uzO-Jg-z0c" secondAttribute="bottom" id="FmL-US-LcQ"/>
+                                    <constraint firstItem="TxB-Uk-5jH" firstAttribute="leading" secondItem="HN2-NX-2gy" secondAttribute="leading" id="EOc-Xc-XHT"/>
                                     <constraint firstItem="Plx-MJ-x4a" firstAttribute="leading" secondItem="HN2-NX-2gy" secondAttribute="leading" constant="40" id="QbP-Te-d2s"/>
+                                    <constraint firstAttribute="trailing" secondItem="TxB-Uk-5jH" secondAttribute="trailing" id="Zxl-qO-XOx"/>
                                     <constraint firstItem="j61-L4-CuZ" firstAttribute="leading" secondItem="HN2-NX-2gy" secondAttribute="leading" id="azE-3d-NCj"/>
-                                    <constraint firstItem="uzO-Jg-z0c" firstAttribute="leading" secondItem="HN2-NX-2gy" secondAttribute="leading" id="d4h-VR-fyO"/>
+                                    <constraint firstAttribute="bottom" secondItem="TxB-Uk-5jH" secondAttribute="bottom" id="mzU-cO-CXT"/>
                                     <constraint firstItem="j61-L4-CuZ" firstAttribute="top" secondItem="HN2-NX-2gy" secondAttribute="top" id="obG-04-iD7"/>
-                                </constraints>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="7P5-Nt-yuF">
-                                <rect key="frame" x="25" y="465" width="325" height="26.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Taux de change au :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UES-mc-svq">
-                                        <rect key="frame" x="0.0" y="0.0" width="234" height="26.5"/>
-                                        <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mx8-Tq-1Pr">
-                                        <rect key="frame" x="282" y="0.0" width="43" height="26.5"/>
-                                        <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="20"/>
-                                        <color key="textColor" red="0.76078431369999999" green="0.2470588235" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="mx8-Tq-1Pr" secondAttribute="trailing" id="FqZ-HV-BoE"/>
-                                    <constraint firstItem="mx8-Tq-1Pr" firstAttribute="top" secondItem="7P5-Nt-yuF" secondAttribute="top" id="QnJ-xh-Lf1"/>
-                                    <constraint firstAttribute="bottom" secondItem="mx8-Tq-1Pr" secondAttribute="bottom" id="bCK-Ca-5Do"/>
-                                    <constraint firstAttribute="bottom" secondItem="UES-mc-svq" secondAttribute="bottom" id="ctA-YN-fz8"/>
-                                    <constraint firstItem="UES-mc-svq" firstAttribute="top" secondItem="7P5-Nt-yuF" secondAttribute="top" id="gOu-0K-ahk"/>
-                                    <constraint firstItem="UES-mc-svq" firstAttribute="leading" secondItem="7P5-Nt-yuF" secondAttribute="leading" id="oHa-lJ-cbT"/>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="jem-gK-TLt">
@@ -144,14 +120,11 @@
                         <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="7P5-Nt-yuF" firstAttribute="top" secondItem="HN2-NX-2gy" secondAttribute="bottom" constant="100" id="7e9-8N-X9o"/>
-                            <constraint firstItem="jem-gK-TLt" firstAttribute="top" secondItem="7P5-Nt-yuF" secondAttribute="bottom" constant="40" id="8qP-5c-CAY"/>
-                            <constraint firstItem="7P5-Nt-yuF" firstAttribute="leading" secondItem="drM-N2-eDO" secondAttribute="leading" constant="25" id="X7X-EH-dX6"/>
                             <constraint firstItem="HN2-NX-2gy" firstAttribute="leading" secondItem="drM-N2-eDO" secondAttribute="leading" constant="60" id="Xd8-Xb-Ogd"/>
                             <constraint firstItem="drM-N2-eDO" firstAttribute="trailing" secondItem="HN2-NX-2gy" secondAttribute="trailing" constant="60" id="irE-4E-C7T"/>
                             <constraint firstItem="drM-N2-eDO" firstAttribute="bottom" secondItem="jem-gK-TLt" secondAttribute="bottom" constant="40" id="nKt-6E-y6a"/>
                             <constraint firstItem="jem-gK-TLt" firstAttribute="centerX" secondItem="7GF-bd-Msm" secondAttribute="centerX" id="ts1-Jl-4E1"/>
-                            <constraint firstAttribute="trailing" secondItem="7P5-Nt-yuF" secondAttribute="trailing" constant="25" id="zrx-Uf-60J"/>
+                            <constraint firstItem="jem-gK-TLt" firstAttribute="top" secondItem="HN2-NX-2gy" secondAttribute="bottom" constant="150" id="zhv-zN-QT2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="drM-N2-eDO"/>
                         <connections>
@@ -162,8 +135,7 @@
                     <connections>
                         <outlet property="baseCurrencyTextField" destination="j61-L4-CuZ" id="x3C-6a-5iH"/>
                         <outlet property="currentExchangeRateLabel" destination="Fu9-Ja-r0R" id="LUB-ky-PsN"/>
-                        <outlet property="dateLabel" destination="mx8-Tq-1Pr" id="1Su-cu-4ja"/>
-                        <outlet property="targetCurrencyTextField" destination="uzO-Jg-z0c" id="eZp-fe-WF2"/>
+                        <outlet property="targetCurrencyLabel" destination="TxB-Uk-5jH" id="tfz-4d-soC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bCy-Ko-teg" userLabel="First Responder" sceneMemberID="firstResponder"/>
