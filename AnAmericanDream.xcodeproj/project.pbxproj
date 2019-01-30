@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F13376122020AA600623421 /* TranslateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F13376022020AA600623421 /* TranslateService.swift */; };
+		6F13376322021D6000623421 /* TranslateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F13376222021D6000623421 /* TranslateData.swift */; };
 		6F6D1F3521FA008200D2C22B /* ExchangeRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6D1F3421FA008200D2C22B /* ExchangeRateViewController.swift */; };
 		6F6D1F3721FA00E600D2C22B /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6D1F3621FA00E600D2C22B /* TranslateViewController.swift */; };
 		6F6D1F3921FA011900D2C22B /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6D1F3821FA011900D2C22B /* WeatherViewController.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6F13376022020AA600623421 /* TranslateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateService.swift; sourceTree = "<group>"; };
+		6F13376222021D6000623421 /* TranslateData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateData.swift; sourceTree = "<group>"; };
 		6F6D1F3421FA008200D2C22B /* ExchangeRateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateViewController.swift; sourceTree = "<group>"; };
 		6F6D1F3621FA00E600D2C22B /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
 		6F6D1F3821FA011900D2C22B /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 		6FC89B3021F9D59C00B86AEE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6F13376222021D6000623421 /* TranslateData.swift */,
+				6F13376022020AA600623421 /* TranslateService.swift */,
 				6F6D1F3A21FA264C00D2C22B /* ExchangeRateService.swift */,
 				6F6D1F3C21FA2AFA00D2C22B /* ExchangeData.swift */,
 			);
@@ -238,6 +244,8 @@
 				6F6D1F3B21FA264C00D2C22B /* ExchangeRateService.swift in Sources */,
 				6F6D1F3921FA011900D2C22B /* WeatherViewController.swift in Sources */,
 				6FC89B0F21F9D44C00B86AEE /* AppDelegate.swift in Sources */,
+				6F13376122020AA600623421 /* TranslateService.swift in Sources */,
+				6F13376322021D6000623421 /* TranslateData.swift in Sources */,
 				6F6D1F3721FA00E600D2C22B /* TranslateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
