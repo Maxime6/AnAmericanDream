@@ -7,13 +7,11 @@
 //
 
 import UIKit
-import QuartzCore
 
 class ExchangeRateViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var baseCurrencyTextField: UITextField!
     @IBOutlet weak var targetCurrencyLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var currentExchangeRateLabel: UILabel!
     
     let exchangeRatesService = ExchangeRateService()
@@ -22,16 +20,15 @@ class ExchangeRateViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         baseCurrencyTextField.borderStyle = .roundedRect
-        self.targetCurrencyLabel.layer.cornerRadius = 3
+        targetCurrencyLabel.layer.cornerRadius = 3
         
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
+        // Appel réseau pour afficher le taux de change
         exchangeRatesService.getExchangeRate { (success, exchangeData) in
             if success, let exchangeData = exchangeData {
                 self.update(exchangeData: exchangeData)
             }
         }
+        
     }
     
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
@@ -42,11 +39,10 @@ class ExchangeRateViewController: UIViewController, UITextFieldDelegate {
         baseCurrencyTextField.resignFirstResponder()
         exchangeRatesService.getExchangeRate { (success, exchangeData) in
             if success, let exchangeData = exchangeData {
-                // Faire la conversion et l'afficher dans le label Target
-//                self.update(exchangeData: exchangeData)
                 self.calculTargetCurrency(exchangeData: exchangeData)
             } else {
                 // Message d'erreur
+                self.presentAlert()
             }
         }
     }
@@ -62,12 +58,16 @@ class ExchangeRateViewController: UIViewController, UITextFieldDelegate {
     
     private func presentAlert() {
         // Alerte d'erreur
+        let alertVC = UIAlertController(title: "Error", message: "The conversion failed", preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        present(alertVC, animated: true, completion: nil)
     }
     
     private func calculTargetCurrency(exchangeData: ExchangeData) {
-        // Calculer le taux de change pour la somme demandé
+        guard let baseCurrencyText = baseCurrencyTextField.text else { return }
         
-        let result = exchangeData.rates.usd * Double(baseCurrencyTextField.text!)!
+        // Vérifier que le text est convertible en double
+        let result = exchangeData.rates.usd * Double(baseCurrencyText)!
         targetCurrencyLabel.text = String(result)
         
     }

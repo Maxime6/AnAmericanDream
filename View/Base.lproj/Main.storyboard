@@ -39,23 +39,23 @@
                                             <action selector="translateButton:" destination="KYg-Zn-wBU" eventType="touchUpInside" id="m8s-dR-WO0"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHU-6y-v1F">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hyL-fg-SrT">
                                         <rect key="frame" x="0.0" y="361" width="315" height="157"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="HHU-6y-v1F" firstAttribute="leading" secondItem="gGr-3A-ws0" secondAttribute="leading" id="0c5-v3-8KU"/>
                                     <constraint firstItem="V3G-m0-fJa" firstAttribute="leading" secondItem="gGr-3A-ws0" secondAttribute="leading" id="7JN-df-RZU"/>
-                                    <constraint firstAttribute="bottom" secondItem="HHU-6y-v1F" secondAttribute="bottom" id="I5O-sg-kjP"/>
+                                    <constraint firstItem="hyL-fg-SrT" firstAttribute="leading" secondItem="gGr-3A-ws0" secondAttribute="leading" id="9gf-dS-sCV"/>
                                     <constraint firstItem="S39-W4-XTO" firstAttribute="centerX" secondItem="gGr-3A-ws0" secondAttribute="centerX" id="J4l-YJ-FJX"/>
+                                    <constraint firstAttribute="trailing" secondItem="hyL-fg-SrT" secondAttribute="trailing" id="MkU-W4-IM4"/>
+                                    <constraint firstAttribute="bottom" secondItem="hyL-fg-SrT" secondAttribute="bottom" id="R7M-Y9-e33"/>
                                     <constraint firstAttribute="trailing" secondItem="V3G-m0-fJa" secondAttribute="trailing" id="U8S-ob-NLb"/>
                                     <constraint firstItem="V3G-m0-fJa" firstAttribute="top" secondItem="gGr-3A-ws0" secondAttribute="top" id="Z1S-kT-b7s"/>
                                     <constraint firstItem="S39-W4-XTO" firstAttribute="centerY" secondItem="gGr-3A-ws0" secondAttribute="centerY" id="hOO-bR-GTK"/>
-                                    <constraint firstAttribute="trailing" secondItem="HHU-6y-v1F" secondAttribute="trailing" id="mDc-VY-2PC"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -71,7 +71,6 @@
                     <tabBarItem key="tabBarItem" title="Translate" id="qye-kw-Utb"/>
                     <connections>
                         <outlet property="baseLanguageTextField" destination="V3G-m0-fJa" id="gWL-Se-47W"/>
-                        <outlet property="targetLanguageLabel" destination="HHU-6y-v1F" id="ZYw-27-4UF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bU5-ev-FL8" userLabel="First Responder" sceneMemberID="firstResponder"/>
