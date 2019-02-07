@@ -42,7 +42,7 @@ class ExchangeRateViewController: UIViewController, UITextFieldDelegate {
                 self.calculTargetCurrency(exchangeData: exchangeData)
             } else {
                 // Message d'erreur
-                self.presentAlert()
+                self.displayAlert(title: "Error", message: "The conversion could not be done, please try again later.", preferredStyle: .alert)
             }
         }
     }
@@ -56,17 +56,10 @@ class ExchangeRateViewController: UIViewController, UITextFieldDelegate {
         currentExchangeRateLabel.text = String(exchangeData.rates.usd) + "$"
     }
     
-    private func presentAlert() {
-        // Alerte d'erreur
-        let alertVC = UIAlertController(title: "Error", message: "The conversion failed", preferredStyle: .alert)
-        alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-        present(alertVC, animated: true, completion: nil)
-    }
-    
     private func calculTargetCurrency(exchangeData: ExchangeData) {
         guard let baseCurrencyText = baseCurrencyTextField.text else { return }
         guard let baseCurrencyDouble = Double(baseCurrencyText) else {
-            presentAlert()
+            self.displayAlert(title: "Error", message: "Please enter numbers.", preferredStyle: .alert)
             return
         }
         let result = exchangeData.rates.usd * baseCurrencyDouble

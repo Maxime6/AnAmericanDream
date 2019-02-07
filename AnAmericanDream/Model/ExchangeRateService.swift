@@ -10,8 +10,6 @@ import Foundation
 
 class ExchangeRateService {
     
-//    private let exchangeRateUrl = URL(string: "http://data.fixer.io/api/latest?access_key=6828305824724f292feaea538719ac6e&base=EUR&symbols=USD")!
-    
     private var task: URLSessionDataTask?
     private let session: URLSession
     

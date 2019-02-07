@@ -30,7 +30,8 @@ class TranslateViewController: UIViewController {
                 let translatedText = translateData.data.translations[0].translatedText
                 self.targetLanguageTextView.text = translatedText
             } else {
-                // Alerte
+                // Alert message
+                self.displayAlert(title: "Error", message: "The translation could not be done, please try again later.", preferredStyle: .alert)
             }
         }
     }
