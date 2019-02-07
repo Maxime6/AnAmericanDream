@@ -68,13 +68,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6FC89B0221F9D44C00B86AEE = {
+		6F124F4B220B2B02006C3AC6 /* AnAmericanDream */ = {
 			isa = PBXGroup;
 			children = (
 				6FC89B3021F9D59C00B86AEE /* Model */,
 				6FC89B2F21F9D59700B86AEE /* View */,
 				6FC89B2E21F9D59100B86AEE /* Controller */,
 				6FC89B0D21F9D44C00B86AEE /* Supporting Files */,
+			);
+			path = AnAmericanDream;
+			sourceTree = "<group>";
+		};
+		6FC89B0221F9D44C00B86AEE = {
+			isa = PBXGroup;
+			children = (
+				6F124F4B220B2B02006C3AC6 /* AnAmericanDream */,
 				6FC89B2221F9D44D00B86AEE /* AnAmericanDreamTests */,
 				6FC89B0C21F9D44C00B86AEE /* Products */,
 			);
@@ -130,8 +138,8 @@
 		6FC89B3021F9D59C00B86AEE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6F13376222021D6000623421 /* TranslateData.swift */,
 				6F13376022020AA600623421 /* TranslateService.swift */,
+				6F13376222021D6000623421 /* TranslateData.swift */,
 				6F6D1F3A21FA264C00D2C22B /* ExchangeRateService.swift */,
 				6F6D1F3C21FA2AFA00D2C22B /* ExchangeData.swift */,
 			);
@@ -409,7 +417,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/AnAmericanDream/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -426,7 +434,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/AnAmericanDream/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

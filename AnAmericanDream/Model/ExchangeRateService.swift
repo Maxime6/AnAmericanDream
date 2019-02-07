@@ -10,7 +10,7 @@ import Foundation
 
 class ExchangeRateService {
     
-    private let exchangeRateUrl = URL(string: "http://data.fixer.io/api/latest?access_key=6828305824724f292feaea538719ac6e&base=EUR&symbols=USD")!
+//    private let exchangeRateUrl = URL(string: "http://data.fixer.io/api/latest?access_key=6828305824724f292feaea538719ac6e&base=EUR&symbols=USD")!
     
     private var task: URLSessionDataTask?
     private let session: URLSession
@@ -21,7 +21,9 @@ class ExchangeRateService {
 
     func getExchangeRate(callback: @escaping ((Bool, ExchangeData?) -> Void)) {
         task?.cancel()
-        task = session.dataTask(with: exchangeRateUrl, completionHandler: { (data, response, error) in
+        guard let url = URL(string: "http://data.fixer.io/api/latest?access_key=6828305824724f292feaea538719ac6e&base=EUR&symbols=USD") else { return }
+        
+        task = session.dataTask(with: url, completionHandler: { (data, response, error) in
             DispatchQueue.main.async {
                 guard let data = data, error == nil else {
                     callback(false, nil)

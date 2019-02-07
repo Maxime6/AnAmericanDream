@@ -65,9 +65,11 @@ class ExchangeRateViewController: UIViewController, UITextFieldDelegate {
     
     private func calculTargetCurrency(exchangeData: ExchangeData) {
         guard let baseCurrencyText = baseCurrencyTextField.text else { return }
-        
-        // Vérifier que le text est convertible en double
-        let result = exchangeData.rates.usd * Double(baseCurrencyText)!
+        guard let baseCurrencyDouble = Double(baseCurrencyText) else {
+            presentAlert()
+            return
+        }
+        let result = exchangeData.rates.usd * baseCurrencyDouble
         targetCurrencyLabel.text = String(result)
         
     }

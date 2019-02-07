@@ -12,14 +12,13 @@ class TranslateViewController: UIViewController {
     
     
     @IBOutlet weak var baseLanguageTextField: UITextField!
-    @IBOutlet weak var targetLanguageLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
     @IBAction func translateButton(_ sender: Any) {
-        
+        baseLanguageTextField.resignFirstResponder()
     }
     
 }

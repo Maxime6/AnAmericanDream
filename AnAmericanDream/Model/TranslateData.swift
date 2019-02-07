@@ -9,5 +9,13 @@
 import Foundation
 
 struct TranslateData: Decodable {
-    
+    let data: DataClass
+}
+
+struct DataClass: Decodable {
+    let translations: [Translation]
+}
+
+struct Translation: Decodable {
+    let translatedText: String
 }
