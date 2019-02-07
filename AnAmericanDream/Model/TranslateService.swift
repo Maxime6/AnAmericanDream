@@ -38,6 +38,7 @@ class TranslateService {
                         callback(false, nil)
                         return
                 }
+                callback(true, responseJSON)
             }
         }
         task?.resume()

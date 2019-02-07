@@ -12,6 +12,9 @@ class TranslateViewController: UIViewController {
     
     
     @IBOutlet weak var baseLanguageTextField: UITextField!
+    @IBOutlet weak var targetLanguageTextView: UITextView!
+    
+    let translateService = TranslateService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +22,17 @@ class TranslateViewController: UIViewController {
 
     @IBAction func translateButton(_ sender: Any) {
         baseLanguageTextField.resignFirstResponder()
+        guard let baseLanguageText = baseLanguageTextField.text else { return }
+        
+        translateService.getTranslation(textToTranslate: baseLanguageText) { (success, translateData) in
+            if success, let translateData = translateData {
+                // traduire le texte
+                let translatedText = translateData.data.translations[0].translatedText
+                self.targetLanguageTextView.text = translatedText
+            } else {
+                // Alerte
+            }
+        }
     }
     
 }

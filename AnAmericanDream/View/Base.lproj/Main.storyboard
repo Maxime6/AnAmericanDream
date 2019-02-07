@@ -70,6 +70,7 @@
                     <tabBarItem key="tabBarItem" title="Translate" id="qye-kw-Utb"/>
                     <connections>
                         <outlet property="baseLanguageTextField" destination="V3G-m0-fJa" id="gWL-Se-47W"/>
+                        <outlet property="targetLanguageTextView" destination="hyL-fg-SrT" id="bFu-2b-0x9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bU5-ev-FL8" userLabel="First Responder" sceneMemberID="firstResponder"/>
