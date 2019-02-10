@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6F124F4E220C8296006C3AC6 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F124F4D220C8296006C3AC6 /* UIViewController.swift */; };
+		6F124F502210372B006C3AC6 /* WheatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F124F4F2210372B006C3AC6 /* WheatherService.swift */; };
+		6F124F5222103739006C3AC6 /* WheatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F124F5122103739006C3AC6 /* WheatherData.swift */; };
 		6F13376122020AA600623421 /* TranslateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F13376022020AA600623421 /* TranslateService.swift */; };
 		6F13376322021D6000623421 /* TranslateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F13376222021D6000623421 /* TranslateData.swift */; };
 		6F6D1F3521FA008200D2C22B /* ExchangeRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6D1F3421FA008200D2C22B /* ExchangeRateViewController.swift */; };
@@ -34,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		6F124F4D220C8296006C3AC6 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		6F124F4F2210372B006C3AC6 /* WheatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheatherService.swift; sourceTree = "<group>"; };
+		6F124F5122103739006C3AC6 /* WheatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheatherData.swift; sourceTree = "<group>"; };
 		6F13376022020AA600623421 /* TranslateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateService.swift; sourceTree = "<group>"; };
 		6F13376222021D6000623421 /* TranslateData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateData.swift; sourceTree = "<group>"; };
 		6F6D1F3421FA008200D2C22B /* ExchangeRateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +153,8 @@
 		6FC89B3021F9D59C00B86AEE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6F124F4F2210372B006C3AC6 /* WheatherService.swift */,
+				6F124F5122103739006C3AC6 /* WheatherData.swift */,
 				6F13376022020AA600623421 /* TranslateService.swift */,
 				6F13376222021D6000623421 /* TranslateData.swift */,
 				6F6D1F3A21FA264C00D2C22B /* ExchangeRateService.swift */,
@@ -262,7 +268,9 @@
 				6F6D1F3D21FA2AFA00D2C22B /* ExchangeData.swift in Sources */,
 				6F6D1F3B21FA264C00D2C22B /* ExchangeRateService.swift in Sources */,
 				6F124F4E220C8296006C3AC6 /* UIViewController.swift in Sources */,
+				6F124F5222103739006C3AC6 /* WheatherData.swift in Sources */,
 				6F6D1F3921FA011900D2C22B /* WeatherViewController.swift in Sources */,
+				6F124F502210372B006C3AC6 /* WheatherService.swift in Sources */,
 				6FC89B0F21F9D44C00B86AEE /* AppDelegate.swift in Sources */,
 				6F13376122020AA600623421 /* TranslateService.swift in Sources */,
 				6F13376322021D6000623421 /* TranslateData.swift in Sources */,

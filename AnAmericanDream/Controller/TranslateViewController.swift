@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TranslateViewController: UIViewController {
+class TranslateViewController: UIViewController, UITextViewDelegate {
     
     
     @IBOutlet weak var baseLanguageTextField: UITextField!
