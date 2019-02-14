@@ -10,8 +10,6 @@ import Foundation
 
 class TranslateService {
     
-//    private let translateUrl = URL(string: "https://translation.googleapis.com/language/translate/v2?key=AIzaSyBlTMupeJcRAQd0w8VXT38HTv82xGPzMOo&source=fr&target=en&format=text")!
-    
     private var task: URLSessionDataTask?
     private var session: URLSession
     
@@ -60,6 +58,9 @@ class TranslateService {
             URLQueryItem(name: "format", value: format),
             URLQueryItem(name: "q", value: q)
         ]
+        
+//        guard let urlComponent = urlComponents else { return }
+//        guard let url = urlComponent.url else { return }
         
         return (urlComponents?.url?.absoluteString)!
     }

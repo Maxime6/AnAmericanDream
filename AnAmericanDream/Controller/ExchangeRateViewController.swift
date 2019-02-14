@@ -63,7 +63,7 @@ class ExchangeRateViewController: UIViewController, UITextFieldDelegate {
             return
         }
         let result = exchangeData.rates.usd * baseCurrencyDouble
-        targetCurrencyLabel.text = String(result)
+        targetCurrencyLabel.text = String(result) + "$"
         
     }
     

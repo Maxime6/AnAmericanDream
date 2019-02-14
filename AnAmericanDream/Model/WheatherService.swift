@@ -10,8 +10,6 @@ import Foundation
 
 class WheatherService {
     
-    private let wheatherUrl = URL(string: "")
-    
     private var task: URLSessionDataTask?
     private var session: URLSession
     
@@ -47,13 +45,13 @@ class WheatherService {
     func createWheatherUrl(city: String) -> String {
         let appid = "7a05ae3a0fef0a5f93ae437fc99b9a00"
         let q = city
-        let unit = "metric"
+        let units = "metric"
         
         var urlComponents = URLComponents(string: "http://api.openweathermap.org/data/2.5/weather")
         urlComponents?.queryItems = [
             URLQueryItem(name: "APPID", value: appid),
             URLQueryItem(name: "q", value: q),
-            URLQueryItem(name: "unit", value: unit)
+            URLQueryItem(name: "units", value: units)
         ]
         
         return (urlComponents?.url?.absoluteString)!
