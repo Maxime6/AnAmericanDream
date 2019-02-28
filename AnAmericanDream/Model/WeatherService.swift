@@ -8,7 +8,7 @@
 
 import Foundation
 
-class WheatherService {
+class WeatherService {
     
     private var task: URLSessionDataTask?
     private var session: URLSession

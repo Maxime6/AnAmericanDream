@@ -14,7 +14,7 @@ class TranslateViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var baseLanguageTextView: UITextView!
     @IBOutlet weak var targetLanguageTextView: UITextView!
     
-    let translateService = TranslateService()
+    let translationService = TranslationService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,7 @@ class TranslateViewController: UIViewController, UITextViewDelegate {
         baseLanguageTextView.resignFirstResponder()
         guard let baseLanguageText = baseLanguageTextView.text else { return }
         
-        translateService.getTranslation(textToTranslate: baseLanguageText) { (success, translateData) in
+        translationService.getTranslation(textToTranslate: baseLanguageText) { (success, translateData) in
             if success, let translateData = translateData {
                 // traduire le texte
                 let translatedText = translateData.data.translations[0].translatedText

@@ -21,7 +21,7 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var humidityLabel: UILabel!
     @IBOutlet weak var cloudinessLabel: UILabel!
     
-    let weatherService = WheatherService()
+    let weatherService = WeatherService()
     
     override func viewDidLoad() {
         super.viewDidLoad()

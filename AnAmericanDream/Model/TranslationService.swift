@@ -8,7 +8,7 @@
 
 import Foundation
 
-class TranslateService {
+class TranslationService {
     
     private var task: URLSessionDataTask?
     private var session: URLSession
