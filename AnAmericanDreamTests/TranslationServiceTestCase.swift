@@ -1,15 +1,14 @@
 //
-//  AnAmericanDreamTests.swift
+//  TranslationServiceTestCase.swift
 //  AnAmericanDreamTests
 //
-//  Created by Yves TANTER on 24/01/2019.
+//  Created by Yves TANTER on 17/02/2019.
 //  Copyright © 2019 Maxime Tanter. All rights reserved.
 //
 
 import XCTest
-@testable import AnAmericanDream
 
-class AnAmericanDreamTests: XCTestCase {
+class TranslationServiceTestCase: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

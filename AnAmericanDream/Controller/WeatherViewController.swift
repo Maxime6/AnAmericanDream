@@ -51,8 +51,9 @@ class WeatherViewController: UIViewController {
         temperatureLabel.text = String(weatherData.main.temp) + "°"
         windDirection(weatherData: weatherData)
         calculateWindSpeed(weatherData: weatherData)
-        cloudinessLabel.text = String(weatherData.clouds.all)
-        humidityLabel.text = String(weatherData.main.humidity)
+        cloudinessLabel.text = String(weatherData.clouds.all) + "%"
+        humidityLabel.text = String(weatherData.main.humidity) + "%"
+        displayWeatherIcon(weatherData: weatherData)
     }
     
     // Display the wind direction in cardinals directions
@@ -77,31 +78,31 @@ class WeatherViewController: UIViewController {
     
     // Calculate wind speed in km/h
     private func calculateWindSpeed(weatherData: WheatherData) {
-        let result = weatherData.wind.speed * 3.6
+        let result = Float(weatherData.wind.speed * 3.6)
         windSpeedLabel.text = String(result) + "km/h"
     }
     
     private func displayWeatherIcon(weatherData: WheatherData) {
         let weatherCode = weatherData.weather[0].id
         
-//        switch weatherCode {
-//        case 200...299:
-//            wheatherIconImageView.image = UIImage(named: "storm")
-//        case 300...399:
-//
-//        case 500...599:
-//
-//        case 600...699:
-//
-//        case 700...799:
-//
-//        case 800:
-//
-//        case 801...899:
-//
-//        default:
-//            break
-//        }
+        switch weatherCode {
+        case 200...299:
+            wheatherIconImageView.image = #imageLiteral(resourceName: "storm")
+        case 300...399:
+            wheatherIconImageView.image = #imageLiteral(resourceName: "rain")
+        case 500...599:
+            wheatherIconImageView.image = #imageLiteral(resourceName: "rain")
+        case 600...699:
+            wheatherIconImageView.image = #imageLiteral(resourceName: "snow")
+        case 700...799:
+            wheatherIconImageView.image = #imageLiteral(resourceName: "atmosphere")
+        case 800:
+            wheatherIconImageView.image = #imageLiteral(resourceName: "clear sky")
+        case 801...899:
+            wheatherIconImageView.image = #imageLiteral(resourceName: "clouds")
+        default:
+            break
+        }
     }
     
 }

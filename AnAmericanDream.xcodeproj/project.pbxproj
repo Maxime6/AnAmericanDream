@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F0D3FC822160E600051A851 /* ExchangeRateServiceTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0D3FC722160E600051A851 /* ExchangeRateServiceTestCase.swift */; };
+		6F0D3FCA22160FEE0051A851 /* ExchangeRateData.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F0D3FC922160FEE0051A851 /* ExchangeRateData.json */; };
+		6F0D3FCC221612020051A851 /* FakeResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0D3FCB221612020051A851 /* FakeResponseData.swift */; };
+		6F0D3FD02216A80A0051A851 /* URLSessionFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0D3FCF2216A80A0051A851 /* URLSessionFake.swift */; };
+		6F0D3FD2221985180051A851 /* TranslationData.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F0D3FD1221985180051A851 /* TranslationData.json */; };
+		6F0D3FD42219852B0051A851 /* WeatherData.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F0D3FD32219852B0051A851 /* WeatherData.json */; };
+		6F0D3FD62219855A0051A851 /* TranslationServiceTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0D3FD52219855A0051A851 /* TranslationServiceTestCase.swift */; };
+		6F0D3FD8221985710051A851 /* WeatherServiceTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0D3FD7221985710051A851 /* WeatherServiceTestCase.swift */; };
 		6F124F4E220C8296006C3AC6 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F124F4D220C8296006C3AC6 /* UIViewController.swift */; };
 		6F124F502210372B006C3AC6 /* WheatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F124F4F2210372B006C3AC6 /* WheatherService.swift */; };
 		6F124F5222103739006C3AC6 /* WheatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F124F5122103739006C3AC6 /* WheatherData.swift */; };
@@ -21,7 +29,6 @@
 		6FC89B1421F9D44C00B86AEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FC89B1221F9D44C00B86AEE /* Main.storyboard */; };
 		6FC89B1621F9D44D00B86AEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FC89B1521F9D44D00B86AEE /* Assets.xcassets */; };
 		6FC89B1921F9D44D00B86AEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FC89B1721F9D44D00B86AEE /* LaunchScreen.storyboard */; };
-		6FC89B2421F9D44D00B86AEE /* AnAmericanDreamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC89B2321F9D44D00B86AEE /* AnAmericanDreamTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +42,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6F0D3FC722160E600051A851 /* ExchangeRateServiceTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateServiceTestCase.swift; sourceTree = "<group>"; };
+		6F0D3FC922160FEE0051A851 /* ExchangeRateData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ExchangeRateData.json; sourceTree = "<group>"; };
+		6F0D3FCB221612020051A851 /* FakeResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeResponseData.swift; sourceTree = "<group>"; };
+		6F0D3FCF2216A80A0051A851 /* URLSessionFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionFake.swift; sourceTree = "<group>"; };
+		6F0D3FD1221985180051A851 /* TranslationData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TranslationData.json; sourceTree = "<group>"; };
+		6F0D3FD32219852B0051A851 /* WeatherData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = WeatherData.json; sourceTree = "<group>"; };
+		6F0D3FD52219855A0051A851 /* TranslationServiceTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationServiceTestCase.swift; sourceTree = "<group>"; };
+		6F0D3FD7221985710051A851 /* WeatherServiceTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherServiceTestCase.swift; sourceTree = "<group>"; };
 		6F124F4D220C8296006C3AC6 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		6F124F4F2210372B006C3AC6 /* WheatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheatherService.swift; sourceTree = "<group>"; };
 		6F124F5122103739006C3AC6 /* WheatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheatherData.swift; sourceTree = "<group>"; };
@@ -52,7 +67,6 @@
 		6FC89B1821F9D44D00B86AEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6FC89B1A21F9D44D00B86AEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6FC89B1F21F9D44D00B86AEE /* AnAmericanDreamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnAmericanDreamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6FC89B2321F9D44D00B86AEE /* AnAmericanDreamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnAmericanDreamTests.swift; sourceTree = "<group>"; };
 		6FC89B2521F9D44D00B86AEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,8 +140,15 @@
 		6FC89B2221F9D44D00B86AEE /* AnAmericanDreamTests */ = {
 			isa = PBXGroup;
 			children = (
-				6FC89B2321F9D44D00B86AEE /* AnAmericanDreamTests.swift */,
 				6FC89B2521F9D44D00B86AEE /* Info.plist */,
+				6F0D3FC722160E600051A851 /* ExchangeRateServiceTestCase.swift */,
+				6F0D3FC922160FEE0051A851 /* ExchangeRateData.json */,
+				6F0D3FD52219855A0051A851 /* TranslationServiceTestCase.swift */,
+				6F0D3FD1221985180051A851 /* TranslationData.json */,
+				6F0D3FD7221985710051A851 /* WeatherServiceTestCase.swift */,
+				6F0D3FD32219852B0051A851 /* WeatherData.json */,
+				6F0D3FCB221612020051A851 /* FakeResponseData.swift */,
+				6F0D3FCF2216A80A0051A851 /* URLSessionFake.swift */,
 			);
 			path = AnAmericanDreamTests;
 			sourceTree = "<group>";
@@ -216,6 +237,7 @@
 					};
 					6FC89B1E21F9D44D00B86AEE = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 						TestTargetID = 6FC89B0A21F9D44C00B86AEE;
 					};
 				};
@@ -254,6 +276,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F0D3FD42219852B0051A851 /* WeatherData.json in Resources */,
+				6F0D3FCA22160FEE0051A851 /* ExchangeRateData.json in Resources */,
+				6F0D3FD2221985180051A851 /* TranslationData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +307,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FC89B2421F9D44D00B86AEE /* AnAmericanDreamTests.swift in Sources */,
+				6F0D3FC822160E600051A851 /* ExchangeRateServiceTestCase.swift in Sources */,
+				6F0D3FD02216A80A0051A851 /* URLSessionFake.swift in Sources */,
+				6F0D3FD62219855A0051A851 /* TranslationServiceTestCase.swift in Sources */,
+				6F0D3FD8221985710051A851 /* WeatherServiceTestCase.swift in Sources */,
+				6F0D3FCC221612020051A851 /* FakeResponseData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +500,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AnAmericanDreamTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -480,6 +510,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.maximetanter.AnAmericanDreamTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnAmericanDream.app/AnAmericanDream";
@@ -491,6 +522,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AnAmericanDreamTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
