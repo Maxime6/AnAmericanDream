@@ -22,13 +22,13 @@
                                 <rect key="frame" x="30" y="60" width="315" height="518"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4ph-ri-p2N">
-                                        <rect key="frame" x="0.0" y="0.0" width="315" height="157"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="118.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" returnKeyType="continue"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S39-W4-XTO">
-                                        <rect key="frame" x="82.5" y="184" width="150" height="150"/>
+                                        <rect key="frame" x="82.5" y="145.5" width="150" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="0rr-MU-xrl"/>
                                             <constraint firstAttribute="height" constant="150" id="Z7n-yZ-y2I"/>
@@ -38,8 +38,18 @@
                                             <action selector="translateButton:" destination="KYg-Zn-wBU" eventType="touchUpInside" id="m8s-dR-WO0"/>
                                         </connections>
                                     </button>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x15-dh-pca">
+                                        <rect key="frame" x="0.0" y="322.5" width="315" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="mCe-Me-AfT"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="dataSource" destination="KYg-Zn-wBU" id="Jvc-lc-j4p"/>
+                                            <outlet property="delegate" destination="KYg-Zn-wBU" id="YrA-LS-nmL"/>
+                                        </connections>
+                                    </pickerView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hyL-fg-SrT">
-                                        <rect key="frame" x="0.0" y="361" width="315" height="157"/>
+                                        <rect key="frame" x="0.0" y="399.5" width="315" height="118.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -53,7 +63,7 @@
                                     <constraint firstAttribute="trailing" secondItem="hyL-fg-SrT" secondAttribute="trailing" id="MkU-W4-IM4"/>
                                     <constraint firstAttribute="bottom" secondItem="hyL-fg-SrT" secondAttribute="bottom" id="R7M-Y9-e33"/>
                                     <constraint firstItem="4ph-ri-p2N" firstAttribute="leading" secondItem="gGr-3A-ws0" secondAttribute="leading" id="fNf-GN-KvB"/>
-                                    <constraint firstItem="S39-W4-XTO" firstAttribute="centerY" secondItem="gGr-3A-ws0" secondAttribute="centerY" id="hOO-bR-GTK"/>
+                                    <constraint firstItem="hyL-fg-SrT" firstAttribute="height" secondItem="4ph-ri-p2N" secondAttribute="height" id="mNH-st-vBx"/>
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tapez le texte à traduire :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGh-HZ-gdp">
@@ -63,7 +73,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.83137254901960778" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="gGr-3A-ws0" firstAttribute="leading" secondItem="Y31-r9-sbJ" secondAttribute="leading" constant="30" id="Ebn-Ug-3oJ"/>
                             <constraint firstItem="Y31-r9-sbJ" firstAttribute="bottom" secondItem="gGr-3A-ws0" secondAttribute="bottom" constant="40" id="KOP-Mg-SW9"/>
@@ -74,14 +85,23 @@
                             <constraint firstItem="gGr-3A-ws0" firstAttribute="leading" secondItem="RGh-HZ-gdp" secondAttribute="leading" id="vx3-CB-GG3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Y31-r9-sbJ"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="nxz-d3-Hmf" appends="YES" id="2Tq-lg-mgl"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Translate" id="qye-kw-Utb"/>
                     <connections>
                         <outlet property="baseLanguageTextView" destination="4ph-ri-p2N" id="kcr-GN-duy"/>
+                        <outlet property="targetLanguagePickerView" destination="x15-dh-pca" id="PSa-p8-nqi"/>
                         <outlet property="targetLanguageTextView" destination="hyL-fg-SrT" id="bFu-2b-0x9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bU5-ev-FL8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="nxz-d3-Hmf">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="KYg-Zn-wBU" id="zPW-Ef-Ytq"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-242.40000000000001" y="-272.11394302848578"/>
         </scene>
@@ -104,7 +124,6 @@
                                                 <subviews>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tEy-ri-xKU">
                                                         <rect key="frame" x="0.0" y="0.0" width="84" height="47"/>
-                                                        <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="25"/>
                                                         <state key="normal" title="New York">
                                                             <color key="titleColor" red="0.76078431369999999" green="0.2470588235" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -302,7 +321,7 @@
                                         </constraints>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.83137254901960778" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="XkJ-3N-Xb2" firstAttribute="leading" secondItem="EfY-Tb-JO5" secondAttribute="leading" constant="15" id="Kz7-vq-w1E"/>
                                     <constraint firstItem="XkJ-3N-Xb2" firstAttribute="top" secondItem="EfY-Tb-JO5" secondAttribute="top" constant="15" id="Qi0-A2-CtG"/>

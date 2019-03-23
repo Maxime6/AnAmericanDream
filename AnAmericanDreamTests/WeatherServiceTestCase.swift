@@ -11,6 +11,7 @@ import XCTest
 
 class WeatherServiceTestCase: XCTestCase {
 
+    // Test if there is an error
     func testGetWeatherShouldPostFailedCallbackIfError() {
         let weatherService = WeatherService(session: URLSessionFake(data: nil, response: nil, error: FakeResponseData.error))
         let city = "New York"
@@ -26,6 +27,7 @@ class WeatherServiceTestCase: XCTestCase {
         
     }
     
+    // Test if there is no data
     func testGetWeatherShouldPostFailedCallbackIfNoData() {
         let weatherService = WeatherService(session: URLSessionFake(data: nil, response: nil, error: nil))
         let city = "New York"
@@ -41,6 +43,7 @@ class WeatherServiceTestCase: XCTestCase {
         
     }
     
+    // Test if the response is incorrect
     func testGetWeatherShouldPostFailedCallbackIfIncorrectResponse() {
         let weatherService = WeatherService(session: URLSessionFake(data: FakeResponseData.weatherCorrectData, response: FakeResponseData.responseKO, error: nil))
         let city = "New York"
@@ -56,6 +59,7 @@ class WeatherServiceTestCase: XCTestCase {
         
     }
     
+    // Test if the data is incorrect
     func testGetWeatherShouldPostFailedCallbackIfIncorrectData() {
         let weatherService = WeatherService(session: URLSessionFake(data: FakeResponseData.networkIncorrectData, response: FakeResponseData.responseOK, error: nil))
         let city = "New York"
@@ -71,6 +75,7 @@ class WeatherServiceTestCase: XCTestCase {
         
     }
     
+    // Test if there is no error and correct data
     func testGetWeatherShouldPostFailedCallbackIfNoErrorAndCorrectData() {
         let weatherService = WeatherService(session: URLSessionFake(data: FakeResponseData.weatherCorrectData, response: FakeResponseData.responseOK, error: nil))
         let city = "New York"

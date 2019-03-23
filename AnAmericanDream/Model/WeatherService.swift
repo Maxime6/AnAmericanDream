@@ -10,6 +10,7 @@ import Foundation
 
 class WeatherService {
     
+    // MARK: - Properties
     private var task: URLSessionDataTask?
     private var session: URLSession
     
@@ -17,6 +18,7 @@ class WeatherService {
         self.session = session
     }
     
+    // MARK: - Network Call
     func getWheather(city: String, callback: @escaping (Bool, WheatherData?) -> Void ) {
         let stringUrl = createWheatherUrl(city: city)
         guard let url = URL(string: stringUrl) else { return }

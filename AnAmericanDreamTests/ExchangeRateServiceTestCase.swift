@@ -11,6 +11,7 @@ import XCTest
 
 class ExchangeRateServiceTestCase: XCTestCase {
 
+    // Test if there is an error
     func testGetExchangeRateShouldPostFailedCallbackIfError() {
         let exchangeRateService = ExchangeRateService(session: URLSessionFake(data: nil, response: nil, error: FakeResponseData.error))
         
@@ -25,6 +26,7 @@ class ExchangeRateServiceTestCase: XCTestCase {
         
     }
     
+    // Test if there is no data
     func testGetExchangeRateShouldPostFailedCallbackIfNoData() {
         let exchangeRateService = ExchangeRateService(session: URLSessionFake(data: nil, response: nil, error: nil))
         
@@ -39,6 +41,7 @@ class ExchangeRateServiceTestCase: XCTestCase {
         
     }
     
+    // Test if the response is incorrect
     func testGetExchangeRateShouldPostFailedCallbackIfIncorrectResponse() {
         let exchangeRateService = ExchangeRateService(session: URLSessionFake(data: FakeResponseData.exchangeRateCorrectData, response: FakeResponseData.responseKO, error: nil))
         
@@ -53,6 +56,7 @@ class ExchangeRateServiceTestCase: XCTestCase {
         
     }
     
+    // Test if the data is incorrect
     func testGetExchangeRateShouldPostFailedCallbackIfIncorrectData() {
         let exchangeRateService = ExchangeRateService(session: URLSessionFake(data: FakeResponseData.networkIncorrectData, response: FakeResponseData.responseOK, error: nil))
         
@@ -67,6 +71,7 @@ class ExchangeRateServiceTestCase: XCTestCase {
         
     }
     
+    // Test if there is no error and correct data
     func testGetExchangeRateShouldPostSuccessCallbackIfNoErrorAndCorrectData() {
         let exchangeRateService = ExchangeRateService(session: URLSessionFake(data: FakeResponseData.exchangeRateCorrectData, response: FakeResponseData.responseOK, error: nil))
         

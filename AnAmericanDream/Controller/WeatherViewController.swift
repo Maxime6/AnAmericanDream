@@ -10,7 +10,7 @@ import UIKit
 
 class WeatherViewController: UIViewController {
     
-    
+    // MARK: - Outlets
     @IBOutlet weak var wheatherIconImageView: UIImageView!
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var newyorkButton: UIButton!
@@ -21,25 +21,44 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var humidityLabel: UILabel!
     @IBOutlet weak var cloudinessLabel: UILabel!
     
-    let weatherService = WeatherService()
+    // MARK: - Properties
+    private let weatherService = WeatherService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        newyorkButton.layer.cornerRadius = 6
-        lorientButton.layer.cornerRadius = 6
+        addCornerRadius()
+        initialNetworkCall()
         
     }
     
+    // MARK: - Actions
     @IBAction func cityButtonTapped(_ sender: UIButton) {
         
         guard let cityChoosed = sender.title(for: .normal) else { return }
+        sender.backgroundColor = UIColor(red: 255.0, green: 212.0, blue: 121.0, alpha: 1)
         
         weatherService.getWheather(city: cityChoosed) { (success, weatherData) in
             if success, let weatherData = weatherData {
                 self.displayWeatherConditions(weatherData: weatherData)
             } else {
                 // Alerte
+                self.displayAlert(title: "Error", message: "The weather could not be display, please try again later.", preferredStyle: .alert)
+            }
+        }
+    }
+    
+    // MARK: - Methods
+    func addCornerRadius() {
+        newyorkButton.layer.cornerRadius = 6
+        lorientButton.layer.cornerRadius = 6
+    }
+    
+    func initialNetworkCall() {
+        weatherService.getWheather(city: "New York") { (success, weatherData) in
+            if success, let weatherData = weatherData {
+                self.displayWeatherConditions(weatherData: weatherData)
+            } else {
                 self.displayAlert(title: "Error", message: "The weather could not be display, please try again later.", preferredStyle: .alert)
             }
         }
@@ -82,6 +101,7 @@ class WeatherViewController: UIViewController {
         windSpeedLabel.text = String(result) + "km/h"
     }
     
+    // Display weather icon
     private func displayWeatherIcon(weatherData: WheatherData) {
         let weatherCode = weatherData.weather[0].id
         

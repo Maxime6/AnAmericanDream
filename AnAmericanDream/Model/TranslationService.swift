@@ -10,15 +10,19 @@ import Foundation
 
 class TranslationService {
     
+    // MARK: - Properties
     private var task: URLSessionDataTask?
     private var session: URLSession
+    
+    var languages = ["en", "es", "de", "it"]
     
     init(session: URLSession = URLSession(configuration: .default)) {
         self.session = session
     }
     
-    func getTranslation(textToTranslate: String, callback: @escaping (Bool, TranslateData?) -> Void) {
-        let stringUrl = createTransleteStringUrl(textToTranslate: textToTranslate)
+    // MARK: - Network Call
+    func getTranslation(textToTranslate: String, translationLanguage: String, callback: @escaping (Bool, TranslateData?) -> Void) {
+        let stringUrl = createTransleteStringUrl(textToTranslate: textToTranslate, translationLanguage: translationLanguage)
         guard let url = URL(string: stringUrl) else { return }
         
         task?.cancel()
@@ -42,11 +46,10 @@ class TranslationService {
         task?.resume()
     }
     
-    private func createTransleteStringUrl(textToTranslate: String) -> String {
-        // Assembler URL avec q + textToTranslate
+    private func createTransleteStringUrl(textToTranslate: String, translationLanguage: String) -> String {
         let key = "AIzaSyBlTMupeJcRAQd0w8VXT38HTv82xGPzMOo"
         let source = "fr"
-        let target = "en"
+        let target = translationLanguage
         let format = "text"
         let q = textToTranslate
         
@@ -58,11 +61,10 @@ class TranslationService {
             URLQueryItem(name: "format", value: format),
             URLQueryItem(name: "q", value: q)
         ]
+
+        guard let urlComponent = urlComponents?.url else { return "" }
         
-//        guard let urlComponent = urlComponents else { return }
-//        guard let url = urlComponent.url else { return }
-        
-        return (urlComponents?.url?.absoluteString)!
+        return urlComponent.absoluteString
     }
     
 }
