@@ -1,4 +1,4 @@
-<img src="AnAmericanDream/Supporting Files/Assets.xcassets/" width="200" />
+<img src="AnAmericanDream/Supporting Files/Assets.xcassets/AppIcon.appiconset/1024.png" width="200" />
 
 
 # AnAmericanDream
