@@ -1,4 +1,4 @@
-<img src="Documentation/Logo_Instagrid.png" width="200" />
+<img src="AnAmericanDream/Supporting Files/Assets.xcassets/" width="200" />
 
 
 # AnAmericanDream
