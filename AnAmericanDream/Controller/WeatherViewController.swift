@@ -36,7 +36,6 @@ class WeatherViewController: UIViewController {
     @IBAction func cityButtonTapped(_ sender: UIButton) {
         
         guard let cityChoosed = sender.title(for: .normal) else { return }
-        sender.backgroundColor = UIColor(red: 255.0, green: 212.0, blue: 121.0, alpha: 1)
         
         weatherService.getWheather(city: cityChoosed) { (success, weatherData) in
             if success, let weatherData = weatherData {

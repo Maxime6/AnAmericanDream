@@ -234,10 +234,11 @@
 				TargetAttributes = {
 					6FC89B0A21F9D44C00B86AEE = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					6FC89B1E21F9D44D00B86AEE = {
 						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 						TestTargetID = 6FC89B0A21F9D44C00B86AEE;
 					};
 				};
@@ -474,7 +475,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.maximetanter.AnAmericanDream;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -492,7 +493,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.maximetanter.AnAmericanDream;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -513,7 +514,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.maximetanter.AnAmericanDreamTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnAmericanDream.app/AnAmericanDream";
 			};
@@ -534,7 +535,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.maximetanter.AnAmericanDreamTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnAmericanDream.app/AnAmericanDream";
 			};
