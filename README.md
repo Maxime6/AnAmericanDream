@@ -28,5 +28,5 @@ Application comprenant 3 onglets :
 
 ### Screenshots
 
-<img src="Documentation/Instagrid_screen1.png" width="300" />   <img src="Documentation/Instagrid_screen2.png" width="300" />
+<img src="Documentation/ExchangeRate.png" width="300" />   <img src="Documentation/Instagrid_screen2.png" width="300" />
 <img src="Documentation/Instagrid_screen3.png" height="300" />
