@@ -29,4 +29,4 @@ Application comprenant 3 onglets :
 ### Screenshots
 
 <img src="Documentation/ExchangeRate.png" width="300" />   <img src="Documentation/LorientWeather.png" width="300" />
-<img src="Documentation/NYWeather.png" height="300" />
+<img src="Documentation/NYWeather.png" width="300" />
